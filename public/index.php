@@ -21,7 +21,16 @@ $dbTools = new DatabaseTools("mysql", "vtc", "root", "root");
 // ================== ÉTAT D'AVANCEMENT ==========================
 
 // 1: Création de la bdd --> OK
-// 2: Création des 3 affichages: conducteur, association_vehicule_conducteur et vehicule
+// 2: Création des 3 affichages (je n'ai fait que le front): conducteur, association_vehicule_conducteur et vehicule
+
+// je n'ai rien fait d'autre, ce n'est pas la peine de chercher à faire fonctionner quoi que ce soit, désolé.
+
+// j'aurais peut-être pu être capable de réaliser l'affichage de la base dans le tableau html, et aussi peut-être l'insertion, mais en plusieurs jours, et même pas en objet.
+
+// j'ai compris le princicipe de la classe, de l'encapsulation, mais c'est tout.
+// Je mets toujours énormément de temps pour comprendre, et c'est difficile pour moi. Ça ne me fait pas plaisir.
+
+// Je me pose la question si je dois continuer dans ce métier, car j'ai l'impression que je vais être un boulet si je dois travailler en groupe.
 
 // ===============================================================
 

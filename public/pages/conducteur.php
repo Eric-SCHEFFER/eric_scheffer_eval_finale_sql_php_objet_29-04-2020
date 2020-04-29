@@ -27,8 +27,12 @@
    </tbody>
 </table>
 
+
+<!-- ======= Pour ajouter un conducteur ======== -->
 <form action="">
-   <input type="text" placeholder="Prénom">
-   <input type="text" placeholder="Nom">
+   <label for="prenom">Prénom</label>
+   <input type="text" placeholder="Prénom" id="prenom">
+   <label for="nom">Nom</label>
+   <input type="text" placeholder="Nom" id="nom">
    <input type="submit" value="Ajouter ce conducteur">
 </form>
