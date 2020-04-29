@@ -26,8 +26,8 @@
    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
 
 
-   <link rel="stylesheet" href="./css/style.css">
-   <title>Blog perso</title>
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <title>VTC</title>
 </head>
 
 <body>

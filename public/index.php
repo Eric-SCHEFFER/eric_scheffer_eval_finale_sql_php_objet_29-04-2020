@@ -6,7 +6,8 @@ use App\Tools\DatabaseTools;
 
 
 $loader = require '../vendor/autoload.php';
-var_dump($loader);
+// var_dump($loader);
+
 //instancier et appeller les librairies externes
 $libsLoader = new LibsLoader();
 $libsLoader->loadLibraries();
@@ -17,41 +18,41 @@ $tools = new DevTools();
 //instancier un tool pour pouvoir utiliser la BDD
 $dbTools = new DatabaseTools("mysql", "vtc", "root", "root");
 
+// ================== ÉTAT D'AVANCEMENT ==========================
 
-// NOTE PERSO:
+// 1: Création de la bdd --> OK
+// 2: Création des 3 affichages: conducteur, association_vehicule_conducteur et vehicule
 
-// Ayant beaucoup de mal à assimiler certaines notions, plutôt que de faire des copié/collé hazardeux, en espérant que celà fonctionne, j'ai trouvé plus constructif pour moi de noter directement ce que je compris ou pas dans ce qu'il y a à faire.
-
-// 1: Création de la bdd
-
-
+// ===============================================================
 
 $request = $_SERVER['REQUEST_URI'];
 $uri = parse_url($request, PHP_URL_PATH);
 
-require('./components/datas.php');
 require('./components/header.php');
-require('./components/enteteEtNavbar.php');
+require('./components/navbar.php');
 
 
 switch ($uri) {
     case '/':
-        require __DIR__ . '/pages/homepage.php';
+        require __DIR__ . '/pages/conducteur.php';
         break;
-    case '/articles':
-        require __DIR__ . '/pages/articles.php';
+    case '/conducteur':
+        require __DIR__ . '/pages/conducteur.php';
         break;
-    case '/article':
-        require __DIR__ . '/pages/article.php';
+    case '/association_vehicule_conducteur':
+        require __DIR__ . '/pages/association_vehicule_conducteur.php';
+        break;
+    case '/vehicule':
+        require __DIR__ . '/pages/vehicule.php';
         break;
     default:
-        require __DIR__ . '/pages/homepage.php';
+        require __DIR__ . '/pages/conducteur.php';
         break;
 }
 
 
 
-echo ('coucou');
+
 ?>
 
 
@@ -68,25 +69,7 @@ echo ('coucou');
 
 <body>
 
-    <h4>Liste des plantes</h4>
-    <table class="table table-dark">
-        <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Prix</th>
-                <th>Catégorie</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php { ?>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+    
 
 </body>
 

@@ -1,0 +1,17 @@
+td {}
+
+td img {
+   height: 60px;
+   width: 60px;
+   object-fit: cover;
+
+   border-radius: 4px;
+}
+
+
+.page {
+   padding: 20px;
+   min-height: 400px;
+}
+
+
