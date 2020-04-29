@@ -25,6 +25,9 @@ class DatabaseTools
         $this->initDatabase();
     }
 
+    // Exemple requette avec jointures (fleuriste)
+    //SELECT * from Plantes inner join Categories on plante_categorie = categorie_id
+
 
 
 
