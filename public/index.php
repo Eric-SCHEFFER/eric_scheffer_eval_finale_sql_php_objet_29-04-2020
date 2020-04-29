@@ -15,9 +15,39 @@ $libsLoader->loadLibraries();
 $tools = new DevTools();
 
 //instancier un tool pour pouvoir utiliser la BDD
-$dbTools = new DatabaseTools("mysql", "fleuriste", "root", "root");
+$dbTools = new DatabaseTools("mysql", "vtc", "root", "root");
 
 
+// NOTE PERSO:
+
+// Ayant beaucoup de mal à assimiler certaines notions, plutôt que de faire des copié/collé hazardeux, en espérant que celà fonctionne, j'ai trouvé plus constructif pour moi de noter directement ce que je compris ou pas dans ce qu'il y a à faire.
+
+// 1: Création de la bdd
+
+
+
+$request = $_SERVER['REQUEST_URI'];
+$uri = parse_url($request, PHP_URL_PATH);
+
+require('./components/datas.php');
+require('./components/header.php');
+require('./components/enteteEtNavbar.php');
+
+
+switch ($uri) {
+    case '/':
+        require __DIR__ . '/pages/homepage.php';
+        break;
+    case '/articles':
+        require __DIR__ . '/pages/articles.php';
+        break;
+    case '/article':
+        require __DIR__ . '/pages/article.php';
+        break;
+    default:
+        require __DIR__ . '/pages/homepage.php';
+        break;
+}
 
 
 
@@ -38,7 +68,7 @@ echo ('coucou');
 
 <body>
 
-<h4>Liste des plantes</h4>
+    <h4>Liste des plantes</h4>
     <table class="table table-dark">
         <thead>
             <tr>
@@ -48,7 +78,7 @@ echo ('coucou');
             </tr>
         </thead>
         <tbody>
-            <?php  { ?>
+            <?php { ?>
                 <tr>
                     <td> </td>
                     <td> </td>

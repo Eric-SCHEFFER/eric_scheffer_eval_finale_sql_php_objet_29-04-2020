@@ -1,9 +1,10 @@
 <?php
 
+// on place ici tous les getters et setters pour intervenir proprement sur les propriétés de la classe PlanteTools
 
 namespace App\Models;
 
-
+// Class à adapter
 class Plante
 {
 
